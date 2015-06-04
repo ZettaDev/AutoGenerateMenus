@@ -1,4 +1,7 @@
 // ready
 $(document).ready(function () {
-    $('.dropdown-submenu > a').submenupicker();
+    $.get( "php/generateMenu.php", function( data ) {
+        $( "#menu" ).html( data );
+        $('.dropdown-submenu > a').submenupicker();
+    });
 });
